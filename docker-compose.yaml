@@ -27,19 +27,19 @@ services:
     networks:
       - hack-network
 
-  # backend:
-  #   image: smart-health-systems-backend
-  #   build:
-  #     context: ./app
-  #     dockerfile: ./Dockerfile
-  #   ports:
-  #     - "8000:8000"
-  #   container_name: smart-health-systems-backend
-  #   depends_on:
-  #     - db
-  #   restart: always
-  #   networks:
-  #     - hack-network
+  smart-health-systems-backend:
+    image: smart-health-systems-backend
+    build:
+      context: ./app
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+    container_name: smart-health-systems-backend
+    depends_on:
+      - db
+    restart: always
+    networks:
+      - hack-network
 
 
 volumes:
